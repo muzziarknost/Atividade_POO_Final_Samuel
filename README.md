@@ -1,54 +1,48 @@
 # Atividade_POO_Final_Samuel
  Atividade final de Programação Orientada a Objetos em Java.
-# Aplicativo de Manipulação de Dados de Pessoa
+# Aplicativo de Gerenciamento de Usuários
 
-Este é um aplicativo em Java para manipular os dados de uma pessoa e persisti-los em um banco de dados MySQL.
+Este é um aplicativo Java simples para gerenciamento de usuários, onde você pode criar, atualizar, listar e deletar informações de usuários. Os dados são armazenados em um banco de dados MySQL.
 
-## Pré-requisitos
+## Requisitos
 
-- Java Development Kit (JDK) 8 ou superior instalado
-- MySQL Server instalado e em execução
-- IDE (como o IntelliJ IDEA ou Eclipse) instalada
-- Conexão com a internet para baixar dependências (se necessário)
+Para executar o aplicativo, você precisará das seguintes ferramentas instaladas em seu computador:
 
-## Configuração do Projeto
+1. **Java Development Kit (JDK)**: É necessário ter o JDK instalado para compilar e executar o código Java. Você pode baixar o JDK no site oficial da Oracle ou usar uma distribuição OpenJDK.
+   - Link para download: [Java SE Development Kit](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html)
 
-1. Clone o repositório para o seu computador ou faça o download do código-fonte.
+2. **MySQL Database**: O aplicativo utiliza um banco de dados MySQL para persistir os dados dos usuários. Certifique-se de ter o MySQL Server instalado em seu computador ou tenha acesso a um servidor MySQL remoto.
+   - Link para download: [MySQL Community Server](https://dev.mysql.com/downloads/mysql/)
 
-2. Abra a sua IDE e importe o projeto.
+3. **MySQL Workbench**: O MySQL Workbench é uma ferramenta gráfica para gerenciamento e administração de bancos de dados MySQL. É útil para criar bancos de dados, tabelas e executar consultas SQL.
+   - Link para download: [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
-3. Certifique-se de que o driver JDBC do MySQL está configurado no projeto. Se não estiver configurado, siga as instruções no arquivo "Adicionando o Driver JDBC" abaixo.
+4. **IDE (Ambiente de Desenvolvimento Integrado)**: Você pode escolher uma IDE de sua preferência para desenvolver o projeto. Duas IDEs populares são:
+   - Eclipse IDE: Uma IDE de código aberto muito usada para desenvolvimento Java.
+     - Link para download: [Eclipse IDE](https://www.eclipse.org/downloads/)
+   - IntelliJ IDEA: Uma poderosa IDE desenvolvida pela JetBrains com uma versão gratuita da comunidade disponível.
+     - Link para download: [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/)
 
-## Adicionando o Driver JDBC
+## Como executar o aplicativo
 
-1. Faça o download do driver JDBC do MySQL.
+1. Faça o download e instale o Java Development Kit (JDK) apropriado para o seu sistema operacional.
 
-2. Abra o projeto na sua IDE.
+2. Instale o MySQL Community Server e siga as instruções para configurar um usuário e senha para acesso ao banco de dados.
 
-3. Adicione o arquivo JAR do driver JDBC ao classpath do projeto. Para fazer isso no IntelliJ IDEA, siga estas etapas:
+3. Faça o download e instale o MySQL Workbench para criar o banco de dados necessário para o aplicativo.
 
-   - Clique com o botão direito no nome do projeto no painel de navegação esquerdo e selecione "Open Module Settings" (Configurações do Módulo).
-   - Na janela "Project Structure" (Estrutura do Projeto), selecione o módulo do projeto no painel esquerdo.
-   - Na guia "Dependencies" (Dependências), clique no botão "+" no canto superior direito e selecione "JARs or directories" (Arquivos JAR ou diretórios).
-   - Navegue até o local onde você baixou o arquivo JAR do driver JDBC e selecione-o.
-   - Clique em "OK" para adicionar o driver JDBC ao projeto.
+4. Clone este repositório em seu computador ou baixe-o como arquivo ZIP e descompacte-o.
 
-## Configuração do Banco de Dados
+5. Abra o MySQL Workbench e conecte-se ao seu servidor MySQL.
 
-1. Certifique-se de que o MySQL Server está instalado e em execução no seu computador.
+6. No MySQL Workbench, crie um novo banco de dados chamado `gerenciamento_usuarios`.
 
-2. Crie um banco de dados vazio no MySQL Server para ser usado pelo aplicativo.
+7. Abra a IDE de sua escolha (por exemplo, Eclipse ou IntelliJ IDEA) e importe o projeto Java para criar o aplicativo.
 
-## Configuração da Conexão com o Banco de Dados
+8. Certifique-se de que o driver JDBC para o MySQL esteja presente na biblioteca do projeto. Caso contrário, faça o download do driver JDBC do site oficial do MySQL e adicione-o à biblioteca do projeto.
 
-1. Abra o arquivo "PessoaDAO.java" no pacote "src" do projeto.
+9. Localize o arquivo `src/BancoDados.java` e atualize as informações de conexão para o seu banco de dados (URL, usuário e senha).
 
-2. No início da classe, altere as constantes `URL`, `USUARIO` e `SENHA` com as informações corretas do seu banco de dados.
+10. Execute o aplicativo Java e a interface do aplicativo de gerenciamento de usuários será exibida.
 
-## Executando o Aplicativo
-
-1. Na sua IDE, execute a classe `GerenciadorPessoas` para iniciar o aplicativo.
-
-2. Siga as instruções exibidas no console ou nas caixas de diálogo para criar, atualizar, listar e deletar pessoas.
-
-
+Agora você pode usar a interface para criar, atualizar, listar e deletar informações de usuários. Os dados serão persistidos no banco de dados MySQL configurado.
